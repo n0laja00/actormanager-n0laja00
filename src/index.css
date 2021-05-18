@@ -11,3 +11,81 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.index_carousel{
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.166);
+}
+
+.carousel_shadow{
+  box-shadow: 2px 4px 6px 1px !important;
+}
+.carousel_height{
+  max-height: 650px;
+}
+
+.carousel_caption {
+  background-color: rgba(0, 0, 0, 0.789) !important;  
+  box-shadow: 2px 4px 6px 1px rgb(0, 0, 0) !important;
+}
+
+.image_height {
+  max-height: 500px !important;
+}
+
+
+.navbar_link, .navbar_link:hover {
+  color: red;
+  text-decoration: none;
+
+}
+
+#creations_list li{
+  text-align: center;
+  font-size: 1.2em;
+}
+#creations_list li:hover{
+  color: red;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.131);
+}
+
+
+.gameCard_title{
+  display: block;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  height: 2em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.text {
+  display: block;
+  overflow-wrap: break-word;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gameCard_ruleSet{
+  display: block;
+  overflow-wrap: break-word;
+  height: 2em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hidden {
+  display: none;
+}
+
+.list_style {
+  list-style: none;
+}
+.list_style li{
+  margin-bottom: 5px; 
+  padding: 2em;
+  border: rgba(0, 0, 0, 0.2) 2px solid;
+}
