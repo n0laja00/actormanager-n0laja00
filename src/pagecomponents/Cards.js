@@ -32,7 +32,7 @@ const Cards = ({type}) => {
         let status=0;
         fetch(URL + "del.php", {
             method: 'POST',
-            headers: {
+            header: {
               'Accept': 'application/json',
               'Content-Type': 'application/json'
             },

@@ -1,5 +1,6 @@
 import {Form, Col, Button} from 'react-bootstrap';
 import React, { useState } from 'react'
+import axios from 'axios';
 
 
 const CreateAssetForm = () => {
@@ -7,15 +8,15 @@ const CreateAssetForm = () => {
     const [name, setName] = useState("");
     const [ruleSet, setRuleSet] = useState("");
     const [description, setDescription] = useState("");
-
+/*
     function handleSubmit(e) {
         e.preventDefault();
 
         const URL = "http://localhost/actormanager/";
         let status=0;
-        fetch(URL + "createAsset.php/", {
+        fetch(URL + "createAsset.php", {
             method: 'POST',
-            headers: {
+            header: {
               'Accept': 'application/json',
               'Content-Type': 'application/json'
             },
@@ -39,10 +40,32 @@ const CreateAssetForm = () => {
         }, (error) => {
             alert(error);
         })
-        setDescription("");
-        setName("");
-        setRuleSet("");
+
     };
+*/
+
+function handleSubmit(e) {
+    e.preventDefault();
+    const URL = "http://localhost/actormanager/";
+    const article = JSON.stringify({               
+        type: type,
+        name: name,
+        ruleSet: ruleSet,
+        description: description });
+    const header = { 
+        
+    };
+
+    axios.post(URL +"createAsset.php", article, { header })
+    .then(response => this.setState({ updatedAt: response.data.updatedAt }))
+    .catch((error) => {
+        console.error('There was an error!', error);
+    });
+    setDescription("");
+    setName("");
+    setRuleSet("");
+
+}
 
 
 
